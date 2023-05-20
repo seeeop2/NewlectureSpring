@@ -77,7 +77,10 @@
                     <h1 class="hidden">고객메뉴</h1>
                     <ul class="linear-layout">
                         <li><a href="/member/home"><img src="/images/txt-mypage.png" alt="마이페이지" /></a></li>
-                        <li><a href="/notice/list.html"><img src="/images/txt-customer.png" alt="고객센터" /></a></li>
+                        <li><a href="/notice/list.do"><img src="/images/txt-customer.png" alt="고객센터" /></a></li>
+                        <%--나는 원래 contextPath까지 모두 붙여줬으나,
+                            없어도 정상 작동 되는 것을 보아하니 빼는 것이 코드 길이에 유리
+                        --%>
                     </ul>
                 </nav>
 
