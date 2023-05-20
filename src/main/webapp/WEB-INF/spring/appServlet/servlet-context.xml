@@ -13,7 +13,25 @@
 	<annotation-driven />
 
 	<!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources directory -->
-	<resources mapping="/resources/**" location="/resources/" />
+	<!--<resources mapping="/resources/**" location="/resources/" />-->
+	<!--덕분에 정적인 파일 resources에서 사용 가능-->
+	<resources mapping="/**" location="/static/" />
+	<!--요즘은 springBoot에서 static 폴더를 자주 쓰는 편이라
+		resources 폴더 대신 static을 이용했다.
+
+		localhost:8083/static/images/1.jpg 이렇게 접근할 줄 알았던 것을
+		localhost:8083/images/1.jpg 이렇게 접근할 수 있도록 mapping을 변경
+
+		*****
+		하지만 내가 이전 프로젝트에서 WEB-INF 아래에 있던 많은 파일들을 resources아래에 위치하였었는데
+		나중에 똑같이 설정했을 때, 에러가 발생하는지 확인 필요
+		그리고, 같이 일하는 사람이 어떻게 세팅하는지에 따라
+		resources 폴더를 살릴지, static 폴더로 변경할지 정해진다.
+		*****
+
+		이미지들이 안 보이는 현상 발생하여, img src에 '/'를 앞에 추가하여,
+		절대 경로로 설정해주니 엑박 현상 해결
+	-->
 
 	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
 	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">

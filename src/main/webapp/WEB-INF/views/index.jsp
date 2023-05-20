@@ -107,7 +107,7 @@
 
             <li class="banner1">
                 <a href="customer/event/1">
-                    <img src="admin/board/event/1/banner-java.png" data-id="1" style="cursor: pointer;" />
+                    <img src="/admin/board/event/1/banner-java.png" data-id="1" style="cursor: pointer;" />
                 </a>
             </li>
 
@@ -135,7 +135,7 @@
         <section class="guide">
             <h1 class="title">강의 플레이어 사용방법 안내</h1>
             <div class="margin-top">
-                <a href="customer/faq/1"><img src="images/customer/installInfo.png" /></a>
+                <a href="customer/faq/1"><img src="/images/customer/installInfo.png" /></a>
             </div>
             <!-- <div>
         2
@@ -329,7 +329,7 @@
             </li> -->
             <li class="item-course normal event">
                 <div>
-                    <a href="course/2"><img src="images/course/java.png" /></a>
+                    <a href="course/2"><img src="/images/course/java.png" /></a>
                 </div>
                 <div>
                     <div>
@@ -371,8 +371,8 @@
     <div class="content-container">
         <h3 class="-text- center green bold -margin- top">협력업체</h3>
         <ul class="-list- horizontal center -margin- bottom top b20">
-            <li><a target="_blank" href="http://www.notepubs.com"><img src="images/notepubs.png" alt="노트펍스" /></a></li>
-            <li><a target="_blank" href="http://www.namoolab.com"><img src="images/namoolab.png" alt="나무랩연구소" /></a></li>
+            <li><a target="_blank" href="http://www.notepubs.com"><img src="/images/notepubs.png" alt="노트펍스" /></a></li>
+            <li><a target="_blank" href="http://www.namoolab.com"><img src="/images/namoolab.png" alt="나무랩연구소" /></a></li>
 
         </ul>
     </div>
@@ -390,7 +390,7 @@
 
 <footer id="footer">
     <div class="content-container">
-        <h2 id="footer-logo"><img src="images/logo-footer.png" alt="회사정보"></h2>
+        <h2 id="footer-logo"><img src="/images/logo-footer.png" alt="회사정보"></h2>
 
         <div id="company-info">
             <dl>

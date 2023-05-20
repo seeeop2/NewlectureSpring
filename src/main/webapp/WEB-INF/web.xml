@@ -28,6 +28,12 @@
 	<servlet-mapping>
 		<servlet-name>appServlet</servlet-name>
 		<url-pattern>/</url-pattern>
+		<!--servlet이 jsp파일 제외하고 정적인 파일은 차단한다.
+			만약 '/*' 이라고 해놓으면, jsp파일까지 차단한다.
+			예를 들어,
+			지금은 내가 url-pattern을 '/'로 설정해두었기에 webapp아래에 jsp 파일을 실행하면 실행이 된다.
+			그러나 url-pattern을 '/*'으로 설정해둔다면, webapp 아래 jsp파일을 실행해도 실행이 불가하다.
+			-->
 	</servlet-mapping>
 
 </web-app>
