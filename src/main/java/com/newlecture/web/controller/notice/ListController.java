@@ -28,6 +28,6 @@ public class ListController {
                        HttpServletResponse response,
                        Model model) {
 
-        return "notice/list";
+        return "notice.list";
     }
 }

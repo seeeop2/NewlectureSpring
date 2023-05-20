@@ -23,6 +23,6 @@ public class DetailController {
                        HttpServletResponse response,
                        Model model) {
 
-        return "notice/detail";
+        return "notice.detail";
     }
 }
