@@ -5,7 +5,7 @@
 <tiles-definitions>
 
     <definition name="notice.list" template="/WEB-INF/views/customer/include/layout.jsp"> <!--layout 파일 지정-->
-        <put-attribute name="title" value="Tiles tutorial homepage" />
+        <put-attribute name="title" value="공지사항" />
         <put-attribute name="header" value="/WEB-INF/views/include/header.jsp" />
         <put-attribute name="visual" value="/WEB-INF/views/customer/include/visual.jsp" />
         <put-attribute name="aside" value="/WEB-INF/views/customer/include/aside.jsp" />
