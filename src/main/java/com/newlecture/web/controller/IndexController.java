@@ -23,7 +23,7 @@ public class IndexController {
 
         model.addAttribute("hi","hi22");
 
-        return "index";
+        return "root.index";
     }
 
 }
