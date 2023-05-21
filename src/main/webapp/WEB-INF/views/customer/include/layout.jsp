@@ -12,8 +12,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <title><tiles:getAsString name="title"></title>
-
+    <title><tiles:getAsString name="title" /></title>
+    <%--자동 완성이 안되어서 내가 괄호를 닫았다. 닫는 과정에서 슬래쉬로 닫아주는 과정을 생략함.
+        그래서 오류가 발생. 닫는 것 확실하게 하자.
+    --%>
     <link href="/css/customer/layout.css" type="text/css" rel="stylesheet" />
     <style>
 

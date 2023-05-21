@@ -33,12 +33,24 @@
 		절대 경로로 설정해주니 엑박 현상 해결
 	-->
 
+<!--tiles를 사용하기 위해 설정해야하는 ViewResolver-->
+	<beans:bean class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+		<beans:property name="viewClass" value="org.springframework.web.servlet.view.tiles3.TilesView" />
+		<beans:property name="order" value="1" />
+	</beans:bean>
+	<beans:bean class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
+		<beans:property name="definitions" value="/WEB-INF/tiles.xml" />
+	</beans:bean>
+<!--여기까지 tiles를 위한 설정-->
+
 	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
 	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<!--viewResolver 덕분에 경로 적는 것 간편해졌다-->
 		<beans:property name="prefix" value="/WEB-INF/views/" />
 		<beans:property name="suffix" value=".jsp" />
+		<beans:property name="order" value="2" />	<!--tiles에서 못 찾으면, InternalResourceViewResolver 이용-->
 	</beans:bean>
+
 	
 	<context:component-scan base-package="com.*" />
 	
