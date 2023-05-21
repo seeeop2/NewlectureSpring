@@ -4,21 +4,19 @@
         "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 <tiles-definitions>
 
-    <definition name="notice.list" template="/WEB-INF/views/customer/include/layout.jsp"> <!--layout 파일 지정-->
+    <definition name="notice.*" template="/WEB-INF/views/customer/include/layout.jsp"> <!--layout 파일 지정-->
         <put-attribute name="title" value="공지사항" />
         <put-attribute name="header" value="/WEB-INF/views/include/header.jsp" />
         <put-attribute name="visual" value="/WEB-INF/views/customer/include/visual.jsp" />
         <put-attribute name="aside" value="/WEB-INF/views/customer/include/aside.jsp" />
-        <put-attribute name="body" value="/WEB-INF/views/customer/notice/list.jsp" />
-        <put-attribute name="footer" value="/WEB-INF/views/include/footer.jsp" />
-    </definition>
+        <put-attribute name="body" value="/WEB-INF/views/customer/notice/{1}.jsp" />
+        <!--definition을 두 개 만들어서, list ,detail 따로따로 지정해줬으나
+        *(와일드카드)를 이용해서 들어오는 단어에 따라 자동으로 이동할 수 있게 수정.
+        중복은 사라지고, 기능은 유지
 
-    <definition name="notice.detail" template="/WEB-INF/views/customer/include/layout.jsp"> <!--layout 파일 지정-->
-        <put-attribute name="title" value="Tiles tutorial homepage" />
-        <put-attribute name="header" value="/WEB-INF/views/include/header.jsp" />
-        <put-attribute name="visual" value="/WEB-INF/views/customer/include/visual.jsp" />
-        <put-attribute name="aside" value="/WEB-INF/views/customer/include/aside.jsp" />
-        <put-attribute name="body" value="/WEB-INF/views/customer/notice/detail.jsp" />
+        2차 주소( ex)notice.list -> notice.* )까지 지정했기에 {1}로 끝났지만
+        3차 주소( ex)notice.list.name -> notice.*.* )까지 지정하면 {1}/{2} 이렇게 표현하면 된다.
+        -->
         <put-attribute name="footer" value="/WEB-INF/views/include/footer.jsp" />
     </definition>
 
